@@ -1,0 +1,6 @@
+grpcio~=1.70.0
+grpcio-tools
+protobuf~=5.29.3
+numpy<2
+librosa~=0.10.2.post1
+onnxruntime-gpu[cuda,cudnn]==1.18.0

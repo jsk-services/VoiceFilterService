@@ -1,0 +1,26 @@
+syntax="proto3";
+
+package jsk.services;
+
+message EmbedRequest {
+  bytes Audio = 1;
+}
+
+message EmbedResponse {
+  repeated float Embedding = 1;
+}
+
+message FilterRequest {
+  bytes Audio = 1;
+  repeated float Embedding = 2;
+}
+
+message FilterResponse {
+  bytes Audio = 1;
+}
+
+service VoiceFilterService {
+  rpc Embed(EmbedRequest) returns (EmbedResponse);
+  
+  rpc Filter(FilterRequest) returns (FilterResponse);
+}
